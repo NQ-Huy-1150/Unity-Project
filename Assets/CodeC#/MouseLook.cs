@@ -10,6 +10,8 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Debug.Log("Cursor locked: " + Cursor.lockState + " | Visible: " + Cursor.visible);
     }
 
     void Update()
