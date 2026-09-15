@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CrosshairInteraction : MonoBehaviour
 {
-    public GameObject promptText;
+    public GameObject promptText;     // InteractPrompt - chữ "E"
     public float interactDistance = 3f;
     public KeyCode interactKey = KeyCode.E;
 
@@ -29,7 +29,7 @@ public class CrosshairInteraction : MonoBehaviour
             }
         }
 
-        // Chỉ gọi SetActive khi trạng thái thực sự thay đổi
+        // LUÔN cập nhật trạng thái hiện/ẩn mỗi frame - không để sót nhánh nào
         if (promptText.activeSelf != foundTarget)
         {
             promptText.SetActive(foundTarget);
